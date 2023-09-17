@@ -6,7 +6,7 @@
 #    By: jabreu-d <jabreu-d@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/14 15:57:44 by jabreu-d          #+#    #+#              #
-#    Updated: 2023/09/14 18:50:30 by jabreu-d         ###   ########.fr        #
+#    Updated: 2023/09/16 17:39:58 by jabreu-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,13 +14,13 @@ NAME = push_swap
 
 CC = cc
 
-FLAGS = -Wall -Wextra -Werror
+#FLAGS = -Wall -Wextra -Werror
 
 LEAKFLAGS = -g3 -fsanitize=address
 
 RM = rm -rf
 
-SRCS = main.c
+SRCS = main.c list_utils.c utils.c list_checker.c
 
 OBJS = $(SRCS:.c=.o)
 

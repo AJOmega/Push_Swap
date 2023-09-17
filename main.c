@@ -6,7 +6,7 @@
 /*   By: jabreu-d <jabreu-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:47:05 by jabreu-d          #+#    #+#             */
-/*   Updated: 2023/09/15 14:31:54 by jabreu-d         ###   ########.fr       */
+/*   Updated: 2023/09/16 19:42:41 by jabreu-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,14 @@ void	atoi_list(char *str, t_list **head)
 		number = (number * 10) + (*str++ - '0');
 	if (number > INT_MAX || number < INT_MIN)
 		print_error("Error", head);
+	ft_lstadd_back(head, ft_lstnew(number * sign));
+	if ((*str == ' ' || *str == '\t'))
+		atoi_list(str, head);
+	else if (*str)
+		print_error("Error", head);
 }
 
-void	check_arguments(int argc, char*argv[])
+void	check_arguments(int argc, char *argv[])
 {
 	int	p;
 	int	i;
@@ -78,4 +83,5 @@ int	main(int argc, char *argv[])
 	b = NULL;
 	while (i < argc)
 		atoi_list(argv[i++], &a);
+	check_list(&a);
 }
