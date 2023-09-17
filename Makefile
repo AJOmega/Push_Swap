@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jabreu-d <jabreu-d@student.42lisboa.com    +#+  +:+       +#+         #
+#    By: jabreu-d <jabreu-d@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/14 15:57:44 by jabreu-d          #+#    #+#              #
-#    Updated: 2023/09/16 17:39:58 by jabreu-d         ###   ########.fr        #
+#    Updated: 2023/09/17 15:48:31 by jabreu-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = push_swap
 
 CC = cc
 
-#FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror
 
 LEAKFLAGS = -g3 -fsanitize=address
 
