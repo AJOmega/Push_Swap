@@ -84,4 +84,5 @@ int	main(int argc, char *argv[])
 	while (i < argc)
 		atoi_list(argv[i++], &a);
 	check_list(&a);
+	start_sorting(&a, &b);
 }
