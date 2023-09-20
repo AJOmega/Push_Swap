@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   list_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jabreu-d <jabreu-d@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jabreu-d <jabreu-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 20:08:35 by jabreu-d          #+#    #+#             */
-/*   Updated: 2023/09/17 16:07:18 by jabreu-d         ###   ########.fr       */
+/*   Updated: 2023/09/20 22:04:41 by jabreu-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,17 @@ void	free_list(t_list **head)
 		*head = temp;
 	}
 	exit(0);
+}
+
+int	ft_lstsize(t_list *lst)
+{
+	int		i;
+	t_list	*temp_lst;
+
+	while (temp_lst)
+	{
+		temp_lst = temp_lst->next;
+		i++;
+	}
+	return (i);
 }
