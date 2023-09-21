@@ -20,7 +20,8 @@ LEAKFLAGS = -g3 -fsanitize=address
 
 RM = rm -rf
 
-SRCS = main.c list_utils.c utils.c list_checker.c
+SRCS = main.c list_utils.c utils.c list_checker.c \
+		operations.c sort.c stack_operations.c algorithm.c
 
 OBJS = $(SRCS:.c=.o)
 

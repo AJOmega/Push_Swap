@@ -38,6 +38,7 @@ void	check_arguments(int argc, char*argv[]);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 t_list	*ft_lstnew(int content);
 void	free_list(t_list **head);
+int		ft_lstsize(t_list *lst);
 
 // utils.c
 
@@ -45,8 +46,13 @@ size_t	ft_strlen(const char *str);
 
 // list_checker.c
 
-void	check_list(t_list **list);
 void	check_duplicates(t_list **list);
 void	check_order(t_list **list);
+void	check_list(t_list **list);
+
+// algorithm.c
+
+void	fill_index(t_list **stack);
+void	start_sorting(t_list **stack_a, t_list **stack_b);
 
 #endif

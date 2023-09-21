@@ -12,6 +12,17 @@
 
 #include "push_swap.h"
 
+void	small_sort(t_list **stack_a, t_list **stack_b, int size)
+{
+	if (size == 2)
+	{
+		rotate(stack_a);
+		write(1, "ra\n", 3);
+	}
+	if (size == 3)
+		sort_3(stack_a, stack_b);
+}
+
 /**
  * cases 3 numbers optimal performance
  * 
@@ -22,13 +33,11 @@
  * "0 2 1" //rra sa
 */
 
-void	small_sort(t_list **stack_a, t_list **stack_b, int size)
+void	sort_3(t_list **stack_a, t_list **stack_b)
 {
-	if (size == 2)
-	{
-		rotate(stack_a);
-		write(1, "ra\n", 3);
-	}
-	if (size == 3)
-		sort_3(stack_a, stack_b);
+	if ((*stack_a)->data > (*stack_a)->next->data && \
+		(*stack_a)->data > (*stack_a)->next->next->data)
+		{
+			execute_move("ra", stack_a, stack_b);
+		}
 }
