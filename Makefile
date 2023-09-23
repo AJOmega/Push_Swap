@@ -39,5 +39,4 @@ clean:
 fclean:
 	$(RM) $(NAME)
 
-re:
-	fclean all
+re: fclean all

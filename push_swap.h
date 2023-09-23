@@ -43,6 +43,7 @@ int		ft_lstsize(t_list *lst);
 // utils.c
 
 size_t	ft_strlen(const char *str);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 // list_checker.c
 
@@ -54,5 +55,23 @@ void	check_list(t_list **list);
 
 void	fill_index(t_list **stack);
 void	start_sorting(t_list **stack_a, t_list **stack_b);
+void	radix_sort(t_list **stack_a, t_list **stack_b);
+
+// sort.c
+
+void	small_sort(t_list **stack_a, t_list **stack_b, int size);
+void	sort_3(t_list **stack_a, t_list **stack_b);
+void	sort_5(t_list **stack_a, t_list **stack_b);
+
+// operations.c
+
+void	execute_move(char *ptr, t_list **stack_a, t_list **stack_b);
+
+// stack_operations.c
+
+int		rotate(t_list **stack);
+int		swap(t_list **stack);
+int		push(t_list **stack_1, t_list **stack_2);
+int		rev_rotate(t_list **stack);
 
 #endif

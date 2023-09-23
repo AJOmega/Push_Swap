@@ -22,7 +22,6 @@ void	fill_index(t_list **stack)
 	head = *stack;
 	current = *stack;
 	temp = head;
-
 	while (current)
 	{
 		index = 0;
@@ -42,8 +41,10 @@ void	start_sorting(t_list **stack_a, t_list **stack_b)
 {
 	int	size;
 
-	size = ft_lstsize(stack_a);
+	size = ft_lstsize(*stack_a);
 	fill_index(stack_a);
 	if (size <= 5)
 		small_sort(stack_a, stack_b, size);
+	else
+		radix_sort(stack_a, stack_b);
 }

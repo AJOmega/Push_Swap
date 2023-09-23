@@ -42,7 +42,7 @@ void	check_order(t_list **list)
 
 	sorted = 1;
 	head = *list;
-	while (head->data)
+	while (head->next)
 	{
 		if (head->data > (head->next)->data)
 			sorted = 0;
